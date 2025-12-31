@@ -181,9 +181,10 @@ watch([spacing, () => props.speed], () => {
 
 <style scoped>
 .curved-loop-container {
-  height: 120px;
+  height: 100%;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,9 +196,9 @@ watch([spacing, () => props.speed], () => {
 .curved-loop-svg {
   user-select: none;
   width: 100%;
-  height: 120px;
+  height: 100%;
   max-width: 100%;
-  max-height: 120px;
+  max-height: 100%;
   min-width: 0;
   min-height: 0;
   overflow: hidden;

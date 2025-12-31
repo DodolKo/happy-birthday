@@ -1,6 +1,6 @@
 <template>
-  <div ref="containerRef" class="relative w-full h-full" @click="handleClick">
-    <canvas ref="canvasRef" class="absolute inset-0 pointer-events-none" />
+  <div ref="containerRef" class="click-spark" @click="handleClick">
+    <canvas ref="canvasRef" class="click-spark__canvas" />
 
     <slot />
   </div>
@@ -183,3 +183,24 @@ watch(
   }
 );
 </script>
+
+<style scoped>
+/* Keep this wrapper as tight as its content so it doesn't push layout (and
+   therefore doesn't cause scrolling/overflow). */
+.click-spark {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+}
+
+.click-spark__canvas {
+  position: relative;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style>
