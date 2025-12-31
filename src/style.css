@@ -1,0 +1,69 @@
+:root {
+  font-family: 'Doto', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(clamp(600px, 60vw, 1200px) clamp(400px, 40vw, 800px) at 15% 15%, rgba(255, 255, 255, 0.08), transparent 60%),
+    radial-gradient(clamp(600px, 60vw, 1200px) clamp(400px, 40vw, 800px) at 85% 20%, rgba(255, 255, 255, 0.06), transparent 60%),
+    radial-gradient(clamp(500px, 50vw, 1000px) clamp(350px, 35vw, 700px) at 50% 90%, rgba(255, 255, 255, 0.04), transparent 60%),
+    linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.15), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.1), transparent),
+    radial-gradient(0.5px 0.5px at 50% 50%, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(0.5px 0.5px at 80% 10%, rgba(255, 255, 255, 0.15), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200% 200%;
+  animation: starfield 20s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes starfield {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+#app {
+  width: 100%;
+  text-align: center;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 480px) {
+  body::before {
+    background-size: 150% 150%;
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    background-size: 200% 200%;
+  }
+}

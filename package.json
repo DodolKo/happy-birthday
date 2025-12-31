@@ -1,0 +1,23 @@
+{
+	"name": "happy-birthday",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"ogl": "^1.0.11",
+		"vue": "^3.5.24"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^6.0.1",
+		"jsrepo": "^3.0.9",
+		"vite": "npm:rolldown-vite@7.2.5"
+	},
+	"overrides": {
+		"vite": "npm:rolldown-vite@7.2.5"
+	}
+}
